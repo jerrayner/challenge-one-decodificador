@@ -1,65 +1,63 @@
-const criptBotao = document.querySelector("#criptografar");
-const decriptBotao = document.querySelector("#descriptografar");
+/*
+Resumo do desafio:
+Troca das vogais por essas strings:
+	a = ai
+	e = enter
+	i = imes
+	o = ober
+	u = ufat
 
-function output(text) {
-    result.innerHTML = text;
-    input.value = "";
-    input.focus(); 
-}
+    Regras:
+	aceitar somente letras minúsculas
+	impedir caracteres especiais e letras com acentos
+	criptografar e decriptografar textos;
 
-function criptografa(text) {
-    var criptografia = {'a':'ai', 'e':'enter', 'i':'imes', 'o':'ober', 'u':'ufat'};
-    var criptografado = text.replace(/[aeiou]/g, m => encrypt[m]);
-    output(criptografia);
-}
+	Extra:
+	- Um botão que copie o texto criptografado/descriptografado para a área de transferência - ou seja, que tenha a mesma funcionalidade do ctrl+C ou da opção "copiar" do menu dos aplicativos.
+	 */
 
-function descriptografa(text) {
-    var decript = {'ai':'a', 'enter':'e', 'imes':'i', 'ober':'o', 'ufat':'u'};
-    for (var key in decript) {
-        if (text.includes(key, 0)) {
-            text = text.replace(new RegExp(key, 'g'), decript[key]);
+    // Função para criptografar:
+
+    function criptografa(){
+        var textParaCriptografar = document.getElementById("texto").value;
+        var textCriptografado = document.getElementById("output-resultado");
+        var palavraCriptografada = "";
+
+        for(let x =0; x < textValue.length; x++) {
+            console.log(textParaCriptografar[x]);
+
+        if (textParaCriptografar[x] === "a") {
+            palavraCriptografada += "ai"
+        } else if (textParaCriptografar[x] === "e") {
+            palavraCriptografada += "enter"
+        } else if (textParaCriptografar[x] === "i") {
+            palavraCriptografada += "imes"
+        } else if (textParaCriptografar[x] === "o") {
+            palavraCriptografada += "ober"
+        } else if (textParaCriptografar[x] === "u") {
+            palavraCriptografada += "ufat"
         }
-    }
-    output(text);
-}
-
-
-function copyToClipboard() {
-    var copyText = result.innerHTML;
-    navigator.clipboard.writeText(copyText).then(
-        function() {
-            alert.style.color = "green";
-            alert.innerHTML = "Copiado!";
+		else { 
+            palavraCriptografada += textParaCriptografar[x]
         }
-    )
-    .catch(
-        function() {
-            alert.style.color = "red";
-            alert.innerHTML = "Infelizmente não foi possivel copiar";
+        console.log(palavraCriptografada);
+        textCriptografado.value = palavraCriptografada;
         }
-    );
-}
+    }   
 
-encryptButton.addEventListener("click", () => {
-    var text = input.value;
-    if (text == "") {
-        showElements();
-    } else {
-        hideElements();
-        encrypt(text);
+    function descriptografa() {
+    
+        var textoCriptografado = document.getElementById("output-resultado").value;
+        var textDescriptografado = document.getElementById("texto");
+
+    
+        var descriptografado = textoCriptografado.replace(/ai/g, 'a')
+        descriptografado = descriptografado.replace(/enter/g, 'e')
+        descriptografado = descriptografado.replace(/imes/g, 'i')
+        descriptografado = descriptografado.replace(/ober/g, 'o')
+        descriptografado = descriptografado.replace(/ufat/g, 'u')
+    
+        textDescriptografado.value = descriptografado;
+    
     }
-})
 
-decryptButton.addEventListener("click", () => {
-    var text = input.value;
-    if (text == "") {
-        showElements();
-    } else {
-        hideElements();
-        decrypt(text);
-    }
-})
-
-copyButton.addEventListener("click", () => {
-    copyToClipboard();
-})
