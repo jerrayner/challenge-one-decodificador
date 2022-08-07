@@ -23,7 +23,7 @@ Troca das vogais por essas strings:
         var textCriptografado = document.getElementById("output-resultado");
         var palavraCriptografada = "";
 
-        for(let x =0; x < textValue.length; x++) {
+        for(let x =0; x < textParaCriptografar.length; x++) {
             console.log(textParaCriptografar[x]);
 
         if (textParaCriptografar[x] === "a") {
