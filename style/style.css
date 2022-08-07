@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f6ff;
+    font-family: 'Source Code Pro', monospace,'Courier New', Courier, monospace;
+}
+
+/* Sessão da Logo */
+header {
+    display: flex;
+}
+
+#logo {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top:-20px;
+}
+/* Seção do texto a ser criptografado */
+h2 {
+    position: absolute;
+    top: 130px;
+    color: #442f4e;
+    left: 30px;
+    display: inline-block;
+}
+
+.inputCriptografar {
+    display: block;
+    position: absolute;
+    top: 180px;
+    color: #2e1f36;
+    width: 550px;
+    height: 300px;
+    left: 100px;
+   
+    text-decoration: none;
+    border: none;
+    background-color: #f9f6ff;
+    font-family: 'Source Code Pro', monospace,'Courier New', Courier, monospace;
+    color: #343A40;
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea::placeholder{
+    color: #442f4e;
+    font-size: 18px;
+}
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+/* Seçaõ dos resultados de criptogração e descriptrogação */
+#resultado {
+    display: flex;
+}
+
+#secaoResultado {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    left: 900px;
+    top: 30px;
+    background: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+#secaoResultado img {
+    width: 300px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    
+}
+
+.texto {
+    color: #343A40;
+    font-weight: 600;
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    align-items: center;
+    left: 70px;
+    display: block;
+}
+
+/* seção dos botões */
+#botoes p {
+    position: absolute;
+    top: -25px;
+    font-size: 10px;
+}
+#botoes img {
+    position: absolute;
+    top: -25px;
+    left: 210px;
+    width: 10px;
+}
+#botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 190px;
+    top: 550px;
+    box-shadow: 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* efeito ao passar o mouse nos botões */
+#criptografar:hover,
+#descriptografar:hover {
+    background-color: #594c5f;
+    transition: all .8s ease-in;
+}
+
+#criptografar,
+#descriptografar {
+    width: 300px;
+    height: 55px;
+    border-radius: 25px;
+    border:  solid 1px #fff;
+    background-color: #522E58;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace, 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+/* Sessão do resultado da decodificação */
+#resultado {
+    display: flex;
+}
+#resultado textarea::placeholder {
+    position: absolute;
+    text-align: center;
+    left: 20px;
+    font-size: 13px;
+    display: block;
+}
+
+#resultado textarea {
+    position: absolute;
+    width: 370px;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    top: 330px;
+    left: 15px;
+    border: none;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    top: 650px;
+    background-color: #522E58;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 10px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer p {
+    text-align: center;
+}
