@@ -166,6 +166,7 @@ textarea:focus, input:focus {
     border: none;
 }
 
+/* Rodapé */
 footer {
     display: flex;
     position: absolute;
@@ -184,4 +185,39 @@ footer {
 
 footer p {
     text-align: center;
+}
+
+/* Responsividade */
+
+@media (min-width: 769px)and (max-width: 1000px) {
+    header img {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 30%;
+        position: relative;
+        left: -350px;
+    }
+    
+    #botoes p {
+        position: relative;
+        text-align: center;
+    }
+    #botoes img {
+        position: relative;
+        align-items: center;
+        left: -1px;
+    }
+
+    footer {
+        position: absolute;
+        max-width: 2000px;
+    }
+
+    #resultado {
+        position: relative;
+        max-width: 30%;
+        left: -370px;
+    }
 }
