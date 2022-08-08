@@ -34,7 +34,7 @@
                     Nenhuma mensagem encontrada
                 </div>
                 <textarea id="output-resultado" placeholder="Digite um texto que deseja criptografar ou descriptografar"></textarea>
-                
+                <button id="copiar" class="botaoCopy" onclick="copiarTexto()">Copiar</button>
             </div>
         </section>
     </main>
@@ -43,10 +43,10 @@
     <section id="botoes">
         <img src="/Challenge-One/images/aviso.png" alt="Alerta">
         <p>Apenas letras minúsculas e sem acento.</p>
-        <button id="criptografar" onclick="criptografa()">
+        <button class="botao" id="criptografar" onclick="criptografa()">
             Criptografar
         </button>
-        <button id="descriptografar" onclick="descriptografa()">
+        <button class="botao" id="descriptografar" onclick="descriptografa()">
             Descriptografar
         </button>
     </section>

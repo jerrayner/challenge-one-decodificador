@@ -123,6 +123,11 @@ textarea:focus, input:focus {
     box-shadow: 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
+.botao:active {
+    transform: scale(1.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 /* efeito ao passar o mouse nos botões */
 #criptografar:hover,
 #descriptografar:hover {
@@ -166,6 +171,35 @@ textarea:focus, input:focus {
     border: none;
 }
 
+/* Botão para copiar */
+#copiar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    left: 50px;
+    top: 550px;
+    border-radius: 25px;
+    border:  solid 1px #fff;
+    background-color: #522E58;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace, 'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-shadow: 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+#copiar:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+
 /* Rodapé */
 footer {
     display: flex;
@@ -189,7 +223,7 @@ footer p {
 
 /* Responsividade */
 
-@media (min-width: 769px)and (max-width: 1000px) {
+@media (min-width: 700px)and (max-width: 1000px) {
     header img {
         max-width: 100%;
     }
@@ -211,13 +245,87 @@ footer p {
     }
 
     footer {
+        display: flex;
         position: absolute;
-        max-width: 2000px;
+        width: 950px;
+        top: 700px;
     }
 
     #resultado {
         position: relative;
         max-width: 30%;
         left: -370px;
+    }
+}
+@media (min-width: 768px)and (max-width: 1024px) {
+    header img {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 30%;
+        position: relative;
+        left: -390px;
+        top: 00px;
+    }
+    
+    #botoes p {
+        position: relative;
+        text-align: center;
+        left: -40px;
+    }
+    #botoes img {
+        position: relative;
+        align-items: center;
+        left: -21px;
+    }
+
+    footer {
+        display: flex;
+        position: absolute;
+        width: 950px;
+        top: 650px;
+    }
+
+    #resultado {
+        position: relative;
+        max-width: 20%;
+        left: -400px;
+    }
+}
+@media (min-width: 320px)and (max-width: 480px) {
+    header img {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 30%;
+        position: relative;
+        left: -390px;
+        top: 30px;
+    }
+    
+    #botoes p {
+        position: relative;
+        text-align: center;
+        left: -40px;
+    }
+    #botoes img {
+        position: relative;
+        align-items: center;
+        left: -21px;
+    }
+
+    footer {
+        display: flex;
+        position: absolute;
+        width: 950px;
+        top: 700px;
+    }
+
+    #resultado {
+        position: relative;
+        max-width: 20%;
+        left: -400px;
     }
 }
