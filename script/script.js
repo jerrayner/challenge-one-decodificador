@@ -1,7 +1,7 @@
 
 var output = "";
 var input = "";
-
+  
 /* variaveis para receber os valores */
 var textParaCriptografar = document.getElementById("texto");
 var textCriptografado = document.getElementById("output-resultado");
@@ -55,5 +55,5 @@ function copiarTexto() {
         textoCopiado.select();
         textoCopiado.setSelectionRange(0, 99999)
         document.execCommand("copy");
-        alert("O texto é: " + textoCopiado.value);
+        alert("Texto copiado para a área de transferência.");
 }
