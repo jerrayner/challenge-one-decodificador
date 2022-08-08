@@ -1,8 +1,8 @@
-// variável auxiliar para receber o valor dos campos
+
 var output = "";
 var input = "";
 
-// em vez de declarar dentro da função , declare fora da função para reaproveitar o código
+/* variaveis para receber os valores */
 var textParaCriptografar = document.getElementById("texto");
 var textCriptografado = document.getElementById("output-resultado");
 // Função para criptografar:
@@ -13,7 +13,7 @@ function criptografa() {
   var palavraCriptografada = "";
 
   for (let x = 0; x < input.length; x++) {
-    // console.log(textParaCriptografar[x]);
+   
 
     if (input[x] === "a") {
       palavraCriptografada += "ai";
@@ -28,15 +28,16 @@ function criptografa() {
     } else {
       palavraCriptografada += input[x];
     }
-    // console.log(palavraCriptografada);
+  
     textCriptografado.innerHTML = palavraCriptografada;
   }
 }
+/* função descriptografar */
 function descriptografa() {
-  // fiz uma variável auxiliar receber o value
+  
   output = textParaCriptografar.value;
 
-  // reduzi um pouco o código
+  
   var descriptografado = output
     .replaceAll(/ai/g, "a")
     .replaceAll(/enter/g, "e")
